@@ -28,36 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.btn2x = new System.Windows.Forms.Button();
             this.btn3x = new System.Windows.Forms.Button();
             this.btn4x = new System.Windows.Forms.Button();
             this.btn5x = new System.Windows.Forms.Button();
             this.btn6x = new System.Windows.Forms.Button();
             this.btn7x = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
+            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.sİLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // listBox1
             // 
+            this.listBox1.ContextMenuStrip = this.contextMenuStrip1;
             this.listBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.listBox1.FormattingEnabled = true;
@@ -76,6 +81,15 @@
             this.panel1.Size = new System.Drawing.Size(145, 456);
             this.panel1.TabIndex = 1;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(48, 87);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(31, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "--------";
+            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.ControlDark;
@@ -88,55 +102,8 @@
             this.flowLayoutPanel1.Location = new System.Drawing.Point(580, 67);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(408, 46);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(421, 46);
             this.flowLayoutPanel1.TabIndex = 2;
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(580, 119);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(408, 350);
-            this.flowLayoutPanel2.TabIndex = 3;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(164, 419);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(410, 50);
-            this.panel2.TabIndex = 4;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.listBox1);
-            this.panel3.Location = new System.Drawing.Point(164, 13);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(410, 400);
-            this.panel3.TabIndex = 5;
-            // 
-            // flowLayoutPanel3
-            // 
-            this.flowLayoutPanel3.Controls.Add(this.button1);
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(13, 474);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(561, 67);
-            this.flowLayoutPanel3.TabIndex = 6;
-            // 
-            // flowLayoutPanel4
-            // 
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(580, 474);
-            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(408, 67);
-            this.flowLayoutPanel4.TabIndex = 7;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.comboBox1);
-            this.panel4.Location = new System.Drawing.Point(580, 13);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(408, 48);
-            this.panel4.TabIndex = 8;
             // 
             // btn2x
             // 
@@ -216,27 +183,20 @@
             this.btn7x.UseVisualStyleBackColor = false;
             this.btn7x.Click += new System.EventHandler(this.btn7x_Click);
             // 
-            // label1
+            // flowLayoutPanel2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(48, 87);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "--------";
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(580, 119);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(421, 350);
+            this.flowLayoutPanel2.TabIndex = 3;
             // 
-            // comboBox1
+            // panel2
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Hepsi"});
-            this.comboBox1.Location = new System.Drawing.Point(282, 15);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 0;
-            this.comboBox1.Text = "Hepsi";
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Location = new System.Drawing.Point(164, 419);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(410, 50);
+            this.panel2.TabIndex = 4;
             // 
             // label2
             // 
@@ -246,6 +206,23 @@
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "label2";
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.listBox1);
+            this.panel3.Location = new System.Drawing.Point(164, 13);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(410, 400);
+            this.panel3.TabIndex = 5;
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.Controls.Add(this.button1);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(13, 474);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(561, 67);
+            this.flowLayoutPanel3.TabIndex = 6;
             // 
             // button1
             // 
@@ -257,12 +234,56 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // flowLayoutPanel4
+            // 
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(580, 474);
+            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(421, 67);
+            this.flowLayoutPanel4.TabIndex = 7;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.comboBox1);
+            this.panel4.Location = new System.Drawing.Point(580, 13);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(421, 48);
+            this.panel4.TabIndex = 8;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.ScrollBar;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Hepsi"});
+            this.comboBox1.Location = new System.Drawing.Point(282, 15);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 0;
+            this.comboBox1.Text = "Hepsi";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sİLToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(99, 26);
+            // 
+            // sİLToolStripMenuItem
+            // 
+            this.sİLToolStripMenuItem.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.sİLToolStripMenuItem.Name = "sİLToolStripMenuItem";
+            this.sİLToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
+            this.sİLToolStripMenuItem.Text = "SİL";
+            this.sİLToolStripMenuItem.Click += new System.EventHandler(this.sİLToolStripMenuItem_Click);
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(999, 547);
+            this.ClientSize = new System.Drawing.Size(1009, 547);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.flowLayoutPanel4);
             this.Controls.Add(this.flowLayoutPanel3);
@@ -289,6 +310,7 @@
             this.panel3.ResumeLayout(false);
             this.flowLayoutPanel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -314,5 +336,7 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem sİLToolStripMenuItem;
     }
 }

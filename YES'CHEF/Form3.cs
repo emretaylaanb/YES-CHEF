@@ -32,6 +32,7 @@ namespace YES_CHEF
         private void Form3_Load(object sender, EventArgs e)
         {
             label1.Text = msismi;
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;//sadece girilen verilerin görüntülenmesini sağlar kullanıcı textbox özelliğini kulllanamaz 
             // veri çekme
             SqlCommand cmd = new SqlCommand("SELECT  masa_ismi ,ürünler_id ,İsmi , tane  , Ücret*tane As 'Fiyat' FROM Masa,İçerikler where  ürünler_id = id and masa_ismi = @veri ", con);
             cmd.Parameters.AddWithValue("@veri", label1.Text);// değişti
@@ -244,6 +245,17 @@ namespace YES_CHEF
 
                 ikram = true;
                 btn7x.BackColor = Color.Lime;
+            }
+        }
+
+        private void sİLToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedIndex != -1)
+            {
+                DataRow drow = dt.Rows[listBox1.SelectedIndex];
+                drow.Delete();
+                dt.AcceptChanges();
+                listeleme();
             }
         }
     }
