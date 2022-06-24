@@ -53,7 +53,7 @@ namespace YES_CHEF
             btn.TextAlign = ContentAlignment.MiddleCenter;
             btn.Name = "button_" + id; //değişti
             btn.Click += new EventHandler(btn_Click);
-            btn.MouseHover += new EventHandler(btn_Hover);
+            btn.MouseEnter += new EventHandler(btn_Enter);
             btn.BackColor = s;
             btn.ContextMenuStrip = contextMenuStrip1;
             flowLayoutPanel2.Controls.Add(btn); //Tahoma; 20,25pt; style=Bold
@@ -62,13 +62,17 @@ namespace YES_CHEF
 
         private void btn_Click(object sender, EventArgs e)
         {
+            if ((sender as Button).BackColor == Color.Gray)
+            {
+                MessageBox.Show("Yeni adisyon açılsın mı ?", "YES'CHEF", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            }
             Form3 form3 = new Form3();
             form3.msismi = (sender as Button).Text;
             form3.ShowDialog();
             
         }
 
-        private void btn_Hover(object sender, EventArgs e)
+        private void btn_Enter(object sender, EventArgs e)
         {
             nesne = sender;    // YENİ BİR YOL LAZM
         }
