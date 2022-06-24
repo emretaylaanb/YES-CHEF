@@ -16,5 +16,12 @@ namespace YES_CHEF
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form2 fomr2  = new Form2();
+            fomr2.Show();
+            this.Hide();
+        }
     }
 }
