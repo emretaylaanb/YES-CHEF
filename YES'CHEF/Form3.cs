@@ -255,5 +255,30 @@ namespace YES_CHEF
                 listeleme();
             }
         }
+
+        
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Ödeme alındı mı ?", "YES'CHEF Masa Kapanış", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                //Masa Silme
+                SqlConnection cone = new SqlConnection("Data Source=EMRET;Initial Catalog=Mekan_Days;Integrated Security=True");
+                cone.Open();
+                SqlCommand cmd = new SqlCommand("delete from Masa where masa_ismi = @veri", cone);
+                cmd.Parameters.AddWithValue("@veri", label1.Text);
+                cmd.ExecuteNonQuery();
+
+                //LOG girme
+                cmd.CommandText = "INSERT INTO Kayıt (Masa_Num , Ödeme_Türü , Ödenen_Tutar , Tarih) VALUES ('" + label1.Text + "' ,'" + (sender as Button).Text + "' , '" + Convert.ToInt32(label2.Text.Substring(0,label2.Text.Length-1)) + "' , '"+(DateTime.Now.Hour+":"+DateTime.Now.Minute+"-"+DateTime.Now.Day+"."+DateTime.Now.Month+"."+DateTime.Now.Year).ToString()+"')"; // gönderim
+                cmd.ExecuteNonQuery();
+
+                //bağlantı kapanış
+                cone.Close();
+                cone.Dispose();
+            }
+
+
+        }
     }
 }
