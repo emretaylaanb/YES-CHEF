@@ -24,6 +24,11 @@ namespace YES_CHEF
         int adet = 1;
         bool ikram = false;
         public string msismi = "";
+        public object masa_butn;
+        
+         //FormIlk nesnesini tanımlıyoruz. Burda önemli olan new diye yeni bir nesne değil, Application.OpenForms komutuyla açık olan Formlar arasından tanımlıyoruz
+
+
         private void btn2x_Click(object sender, EventArgs e)
         {
             button((sender as Button));
@@ -47,10 +52,10 @@ namespace YES_CHEF
             da2.SelectCommand = cmd2;
             da2.Fill(dt2);
 
-
+            
 
             //comboboxa kategori girme 
-            
+
             for (int i = 0; i < dt2.Rows.Count; i++)
             {
                 DataRow idatarow = dt2.Rows[i];
@@ -273,9 +278,30 @@ namespace YES_CHEF
                 cmd.CommandText = "INSERT INTO Kayıt (Masa_Num , Ödeme_Türü , Ödenen_Tutar , Tarih) VALUES ('" + label1.Text + "' ,'" + (sender as Button).Text + "' , '" + Convert.ToInt32(label2.Text.Substring(0,label2.Text.Length-1)) + "' , '"+(DateTime.Now.Hour+":"+DateTime.Now.Minute+"-"+DateTime.Now.Day+"."+DateTime.Now.Month+"."+DateTime.Now.Year).ToString()+"')"; // gönderim
                 cmd.ExecuteNonQuery();
 
+                //Masa durumunu düzeltme
+                cmd.CommandText= "Update Masalar Set Durum = 0 Where Masa_İsmi = '" + label1.Text + "'";
+                cmd.ExecuteNonQuery();
+
                 //bağlantı kapanış
                 cone.Close();
                 cone.Dispose();
+
+                
+                Form2 form2 = (Form2)Application.OpenForms["Form2"];
+               
+                for (int i = 0; i < form2.dt.Rows.Count; i++)
+                {
+                    DataRow dtrow = form2.dt.Rows[i];
+                    if (dtrow["Masa_İsmi"] == msismi)
+                    {
+                        dtrow["Durum"] = 0;
+                        form2.btn_renk();
+                    }
+                }
+
+                this.Close();
+                
+   
             }
 
 

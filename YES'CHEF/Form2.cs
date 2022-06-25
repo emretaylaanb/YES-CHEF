@@ -18,7 +18,7 @@ namespace YES_CHEF
             InitializeComponent();
         }
 
-        DataTable dt = new DataTable();
+        public DataTable dt = new DataTable();
         SqlConnection con = new SqlConnection("Data Source=EMRET;Initial Catalog=Mekan_Days;Integrated Security=True");
         Object nesne;
 
@@ -28,20 +28,9 @@ namespace YES_CHEF
             SqlDataAdapter da = new SqlDataAdapter();
             da.SelectCommand = cmd;
             da.Fill(dt);
-            Color a = Color.Gray;
-            for (int i = 0; i < dt.Rows.Count; i++)
-            {
-                DataRow dr = dt.Rows[i];
-                if (Convert.ToInt32(dr["Durum"]) == 1)
-                {
-                    a = Color.Lime;
-                }
-                else
-                {
-                    a = Color.Gray;
-                }
-                içerikler(dr["Masa_İsmi"].ToString(), a, i);
-            }
+
+            btn_renk();
+            
         }
 
         void içerikler(string isim, Color s, int id)
@@ -64,21 +53,63 @@ namespace YES_CHEF
         {
             if ((sender as Button).BackColor == Color.Gray)
             {
-                MessageBox.Show("Yeni adisyon açılsın mı ?", "YES'CHEF", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+               DialogResult result = MessageBox.Show("Yeni adisyon açılsın mı ?", "YES'CHEF", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if(result == DialogResult.Yes)
+                {
+                    SqlConnection cons = new SqlConnection("Data Source=EMRET;Initial Catalog=Mekan_Days;Integrated Security=True");
+                    (sender as Button).BackColor = Color.Lime;
+                    cons.Open();
+                    SqlCommand kod  = new SqlCommand("Update Masalar Set Durum = 1 Where Masa_İsmi = '"+(sender as Button).Text+"'",cons);
+                    kod.ExecuteNonQuery();
+                    Form3 form3 = new Form3();
+                    form3.msismi = (sender as Button).Text;
+                    form3.ShowDialog();
+                    for (int i = 0; i<dt.Rows.Count; i++)
+                    {
+                        DataRow dtrow = dt.Rows[i];
+                        if (dtrow["Masa_İsmi"]==(sender as Button).Text)
+                        {
+                            dtrow["Durum"] = 1;
+                        }
+                    }
+                    cons.Close();
+                    cons.Dispose();
+                }
             }
-            Form3 form3 = new Form3();
-            form3.msismi = (sender as Button).Text;
-            form3.ShowDialog();
+            else
+            {
+                Form3 form3 = new Form3();
+                form3.msismi = (sender as Button).Text;
+                form3.ShowDialog();
+                
+            }
+           
             
         }
 
         private void btn_Enter(object sender, EventArgs e)
         {
-            nesne = sender;    // YENİ BİR YOL LAZM
+            nesne = sender;    // bulundu yeni yol
         }
 
 
-
-
+        public void btn_renk() // çalışıyor fakat hantallaştırıyor programı
+        {
+            flowLayoutPanel2.Controls.Clear();
+            Color a = Color.Gray;
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                DataRow dr = dt.Rows[i];
+                if (Convert.ToInt32(dr["Durum"]) == 1)
+                {
+                    a = Color.Lime;
+                }
+                else
+                {
+                    a = Color.Gray;
+                }
+                içerikler(dr["Masa_İsmi"].ToString(), a, i);
+            }
+        }
     }
 }
