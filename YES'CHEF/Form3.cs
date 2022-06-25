@@ -50,14 +50,11 @@ namespace YES_CHEF
 
 
             //comboboxa kategori girme 
-            string eklenen = "";
+            
             for (int i = 0; i < dt2.Rows.Count; i++)
             {
-
                 DataRow idatarow = dt2.Rows[i];
-                if (i == 0) { eklenen = idatarow["Kategori"].ToString(); comboBox1.Items.Add(idatarow["Kategori"].ToString()); }
-
-                if (idatarow["Kategori"].ToString() != eklenen)
+                if (comboBox1.Items.IndexOf(idatarow["Kategori"]) == -1)
                 {
                     comboBox1.Items.Add(idatarow["Kategori"].ToString());
                 }
