@@ -114,25 +114,20 @@ namespace YES_CHEF
 
         private void masaSilToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // koşul eklenmeli
-            
-            con.Open();
-            SqlCommand cmd = new SqlCommand("delete from Masalar Where Masa_İsmi = @veri", con);
-            cmd.Parameters.AddWithValue("@veri", (nesne as Button).Text);
-            cmd.ExecuteNonQuery();
-            con.Close();
-            for (int i = 0; i < dt.Rows.Count;i++)
+            // koşul eklendi
+            if ((nesne as Button).BackColor == Color.Lime)
             {
-                DataRow row = dt.Rows[i];
-                if (row["Masa_İsmi"] == (nesne as Button).Text)
+                DialogResult resultt = MessageBox.Show("Silmek istediğiniz masanın adisyonu bulunmaktadır. Silmek istediğinize emin misiniz ?", "YES'CHEF", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (resultt == DialogResult.Yes)
                 {
-                    row.Delete();
-                    dt.AcceptChanges();
+                    masasil();
                 }
-
+            }
+            else
+            {
+                masasil();
             }
             
-            flowLayoutPanel2.Controls.Remove((Control)nesne);
         }
 
         private void yenidenAdlandırToolStripMenuItem_Click(object sender, EventArgs e)
@@ -140,6 +135,29 @@ namespace YES_CHEF
             Form4 fmr4 = new Form4();
             fmr4.isim = (nesne as Button).Text;
             fmr4.ShowDialog();
+        }
+
+        private void masasil()
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("delete from Masalar Where Masa_İsmi = @veri", con);
+            cmd.Parameters.AddWithValue("@veri", (nesne as Button).Text);
+            cmd.ExecuteNonQuery();
+            cmd.CommandText = "delete from Masa where masa_ismi = @vveri";
+            cmd.Parameters.AddWithValue("@vveri", (nesne as Button).Text); // optimizasyon yapılacak
+            cmd.ExecuteNonQuery();
+            con.Close();
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                DataRow row = dt.Rows[i];
+                if (row["Masa_İsmi"] == (nesne as Button).Text)
+                {
+                    row.Delete();
+                    dt.AcceptChanges();
+                }
+            }
+
+            flowLayoutPanel2.Controls.Remove((Control)nesne);
         }
     }
 }
