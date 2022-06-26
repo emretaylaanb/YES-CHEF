@@ -134,6 +134,7 @@ namespace YES_CHEF
         {
             Form4 fmr4 = new Form4();
             fmr4.isim = (nesne as Button).Text;
+            fmr4.masa_acik = true;
             fmr4.ShowDialog();
         }
 

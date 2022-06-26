@@ -40,7 +40,7 @@ namespace YES_CHEF
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;//sadece girilen verilerin görüntülenmesini sağlar kullanıcı textbox özelliğini kulllanamaz 
             // veri çekme
             SqlCommand cmd = new SqlCommand("SELECT  masa_ismi ,ürünler_id ,İsmi , tane  , Ücret*tane As 'Fiyat' FROM Masa,İçerikler where  ürünler_id = id and masa_ismi = @veri ", con);
-            cmd.Parameters.AddWithValue("@veri", label1.Text);// değişti
+            cmd.Parameters.AddWithValue("@veri", msismi);// değişti
             SqlDataAdapter da = new SqlDataAdapter();
             da.SelectCommand = cmd;
             da.Fill(dt);
