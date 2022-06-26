@@ -49,10 +49,10 @@
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.contextMenuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -120,7 +120,7 @@
             this.flowLayoutPanel1.Location = new System.Drawing.Point(580, 67);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(421, 46);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(436, 46);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // btn2x
@@ -130,7 +130,7 @@
             this.btn2x.Location = new System.Drawing.Point(4, 4);
             this.btn2x.Margin = new System.Windows.Forms.Padding(4, 4, 3, 4);
             this.btn2x.Name = "btn2x";
-            this.btn2x.Size = new System.Drawing.Size(60, 37);
+            this.btn2x.Size = new System.Drawing.Size(64, 37);
             this.btn2x.TabIndex = 0;
             this.btn2x.Text = "2X";
             this.btn2x.UseVisualStyleBackColor = false;
@@ -140,10 +140,10 @@
             // 
             this.btn3x.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btn3x.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold);
-            this.btn3x.Location = new System.Drawing.Point(71, 4);
+            this.btn3x.Location = new System.Drawing.Point(75, 4);
             this.btn3x.Margin = new System.Windows.Forms.Padding(4);
             this.btn3x.Name = "btn3x";
-            this.btn3x.Size = new System.Drawing.Size(60, 37);
+            this.btn3x.Size = new System.Drawing.Size(64, 37);
             this.btn3x.TabIndex = 1;
             this.btn3x.Text = "3X";
             this.btn3x.UseVisualStyleBackColor = false;
@@ -153,10 +153,10 @@
             // 
             this.btn4x.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btn4x.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold);
-            this.btn4x.Location = new System.Drawing.Point(139, 4);
+            this.btn4x.Location = new System.Drawing.Point(147, 4);
             this.btn4x.Margin = new System.Windows.Forms.Padding(4);
             this.btn4x.Name = "btn4x";
-            this.btn4x.Size = new System.Drawing.Size(60, 37);
+            this.btn4x.Size = new System.Drawing.Size(64, 37);
             this.btn4x.TabIndex = 2;
             this.btn4x.Text = "4X";
             this.btn4x.UseVisualStyleBackColor = false;
@@ -166,10 +166,10 @@
             // 
             this.btn5x.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btn5x.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold);
-            this.btn5x.Location = new System.Drawing.Point(207, 4);
+            this.btn5x.Location = new System.Drawing.Point(219, 4);
             this.btn5x.Margin = new System.Windows.Forms.Padding(4);
             this.btn5x.Name = "btn5x";
-            this.btn5x.Size = new System.Drawing.Size(60, 37);
+            this.btn5x.Size = new System.Drawing.Size(64, 37);
             this.btn5x.TabIndex = 3;
             this.btn5x.Text = "5X";
             this.btn5x.UseVisualStyleBackColor = false;
@@ -179,10 +179,10 @@
             // 
             this.btn6x.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btn6x.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold);
-            this.btn6x.Location = new System.Drawing.Point(275, 4);
+            this.btn6x.Location = new System.Drawing.Point(291, 4);
             this.btn6x.Margin = new System.Windows.Forms.Padding(4);
             this.btn6x.Name = "btn6x";
-            this.btn6x.Size = new System.Drawing.Size(60, 37);
+            this.btn6x.Size = new System.Drawing.Size(64, 37);
             this.btn6x.TabIndex = 4;
             this.btn6x.Text = "6X";
             this.btn6x.UseVisualStyleBackColor = false;
@@ -192,10 +192,10 @@
             // 
             this.btn7x.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btn7x.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn7x.Location = new System.Drawing.Point(343, 4);
+            this.btn7x.Location = new System.Drawing.Point(363, 4);
             this.btn7x.Margin = new System.Windows.Forms.Padding(4);
             this.btn7x.Name = "btn7x";
-            this.btn7x.Size = new System.Drawing.Size(60, 37);
+            this.btn7x.Size = new System.Drawing.Size(64, 37);
             this.btn7x.TabIndex = 5;
             this.btn7x.Text = "İKRAM";
             this.btn7x.UseVisualStyleBackColor = false;
@@ -203,9 +203,10 @@
             // 
             // flowLayoutPanel2
             // 
+            this.flowLayoutPanel2.AutoScroll = true;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(580, 119);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(421, 350);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(439, 350);
             this.flowLayoutPanel2.TabIndex = 3;
             // 
             // panel2
@@ -259,15 +260,35 @@
             this.flowLayoutPanel4.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowLayoutPanel4.Location = new System.Drawing.Point(580, 474);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(421, 67);
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(436, 67);
             this.flowLayoutPanel4.TabIndex = 7;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(358, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 58);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "Kredi";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button3_Click_1);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(277, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 58);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "Nakit";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.comboBox1);
             this.panel4.Location = new System.Drawing.Point(580, 13);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(421, 48);
+            this.panel4.Size = new System.Drawing.Size(436, 48);
             this.panel4.TabIndex = 8;
             // 
             // comboBox1
@@ -284,32 +305,12 @@
             this.comboBox1.Text = "Hepsi";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(343, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 58);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Kredi";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button3_Click_1);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(262, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 58);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Nakit";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
-            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(1009, 547);
+            this.ClientSize = new System.Drawing.Size(1035, 547);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.flowLayoutPanel4);
             this.Controls.Add(this.flowLayoutPanel3);
