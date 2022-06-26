@@ -36,6 +36,7 @@
             this.masaSilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.yenidenAdlandırToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.aÇToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.flowLayoutPanel1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -63,10 +64,11 @@
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aÇToolStripMenuItem,
             this.masaSilToolStripMenuItem,
             this.yenidenAdlandırToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(226, 60);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(226, 110);
             // 
             // masaSilToolStripMenuItem
             // 
@@ -91,6 +93,14 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(240, 150);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // aÇToolStripMenuItem
+            // 
+            this.aÇToolStripMenuItem.Font = new System.Drawing.Font("Arial Black", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.aÇToolStripMenuItem.Name = "aÇToolStripMenuItem";
+            this.aÇToolStripMenuItem.Size = new System.Drawing.Size(225, 28);
+            this.aÇToolStripMenuItem.Text = "AÇ";
+            this.aÇToolStripMenuItem.Click += new System.EventHandler(this.aÇToolStripMenuItem_Click);
             // 
             // Form2
             // 
@@ -122,5 +132,6 @@
         private System.Windows.Forms.ToolStripMenuItem masaSilToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem yenidenAdlandırToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ToolStripMenuItem aÇToolStripMenuItem;
     }
 }

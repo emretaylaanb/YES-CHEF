@@ -160,5 +160,10 @@ namespace YES_CHEF
 
             flowLayoutPanel2.Controls.Remove((Control)nesne);
         }
+
+        private void aÇToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btn_Click(nesne,e);
+        }
     }
 }
