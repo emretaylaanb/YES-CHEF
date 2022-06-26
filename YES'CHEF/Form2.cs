@@ -30,7 +30,7 @@ namespace YES_CHEF
             da.Fill(dt);
 
             btn_renk();
-            
+            dataGridView1.DataSource = dt;//silinecek
         }
 
         void içerikler(string isim, Color s, int id)
@@ -110,6 +110,36 @@ namespace YES_CHEF
                 }
                 içerikler(dr["Masa_İsmi"].ToString(), a, i);
             }
+        }
+
+        private void masaSilToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // koşul eklenmeli
+            
+            con.Open();
+            SqlCommand cmd = new SqlCommand("delete from Masalar Where Masa_İsmi = @veri", con);
+            cmd.Parameters.AddWithValue("@veri", (nesne as Button).Text);
+            cmd.ExecuteNonQuery();
+            con.Close();
+            for (int i = 0; i < dt.Rows.Count;i++)
+            {
+                DataRow row = dt.Rows[i];
+                if (row["Masa_İsmi"] == (nesne as Button).Text)
+                {
+                    row.Delete();
+                    dt.AcceptChanges();
+                }
+
+            }
+            
+            flowLayoutPanel2.Controls.Remove((Control)nesne);
+        }
+
+        private void yenidenAdlandırToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form4 fmr4 = new Form4();
+            fmr4.isim = (nesne as Button).Text;
+            fmr4.ShowDialog();
         }
     }
 }

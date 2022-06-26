@@ -33,11 +33,18 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.masaSilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.yenidenAdlandırToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("flowLayoutPanel1.BackgroundImage")));
+            this.flowLayoutPanel1.Controls.Add(this.dataGridView1);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -55,8 +62,35 @@
             // 
             // contextMenuStrip1
             // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.masaSilToolStripMenuItem,
+            this.yenidenAdlandırToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(226, 60);
+            // 
+            // masaSilToolStripMenuItem
+            // 
+            this.masaSilToolStripMenuItem.Font = new System.Drawing.Font("Arial Black", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.masaSilToolStripMenuItem.Name = "masaSilToolStripMenuItem";
+            this.masaSilToolStripMenuItem.Size = new System.Drawing.Size(225, 28);
+            this.masaSilToolStripMenuItem.Text = "Masa Sil";
+            this.masaSilToolStripMenuItem.Click += new System.EventHandler(this.masaSilToolStripMenuItem_Click);
+            // 
+            // yenidenAdlandırToolStripMenuItem
+            // 
+            this.yenidenAdlandırToolStripMenuItem.Font = new System.Drawing.Font("Arial Black", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.yenidenAdlandırToolStripMenuItem.Name = "yenidenAdlandırToolStripMenuItem";
+            this.yenidenAdlandırToolStripMenuItem.Size = new System.Drawing.Size(225, 28);
+            this.yenidenAdlandırToolStripMenuItem.Text = "Yeniden Adlandır";
+            this.yenidenAdlandırToolStripMenuItem.Click += new System.EventHandler(this.yenidenAdlandırToolStripMenuItem_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.TabIndex = 0;
             // 
             // Form2
             // 
@@ -73,6 +107,9 @@
             this.Text = "YES\'CHEF";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form2_Load);
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.contextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -82,5 +119,8 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem masaSilToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem yenidenAdlandırToolStripMenuItem;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
