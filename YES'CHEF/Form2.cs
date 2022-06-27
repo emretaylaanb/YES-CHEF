@@ -138,7 +138,7 @@ namespace YES_CHEF
             fmr4.ShowDialog();
         }
 
-        private void masasil()
+        public void masasil()
         {
             con.Open();
             SqlCommand cmd = new SqlCommand("delete from Masalar Where Masa_İsmi = @veri", con);
@@ -206,7 +206,8 @@ namespace YES_CHEF
 
         private void masalarıBirleştirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Form5 form5 = new Form5();
+            form5.ShowDialog();
         }
     }
 }
