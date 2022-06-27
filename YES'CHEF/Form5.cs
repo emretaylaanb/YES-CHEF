@@ -39,12 +39,7 @@ namespace YES_CHEF
         SqlConnection sqlConnection = new SqlConnection("Data Source=EMRET;Initial Catalog=Mekan_Days;Integrated Security=True");
         private void button1_Click(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedItem == comboBox2.SelectedItem)
-            {
-                MessageBox.Show("Seçim hatası , lütfen kontrol ediniz.", "YES'CHEF", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
+            
 
                 sqlConnection.Open();
                 if (checkBox1.Checked == true)
@@ -70,7 +65,7 @@ namespace YES_CHEF
                 form2.btn_renk();
                 sqlConnection.Close();
                 this.Close();
-            }
+            
         }
 
         void işlem()
