@@ -19,6 +19,7 @@ namespace YES_CHEF
         }
         public string isim;
         public bool masa_acik = false;
+        
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -33,9 +34,21 @@ namespace YES_CHEF
         private void button1_Click(object sender, EventArgs e)
         {
 
-                if (textBox1.Text == isim)
+            if (textBox1.Text == isim)
+            {
+                this.Close();
+            }
+            else
+            {
+
+                Form2 form2 = (Form2)Application.OpenForms["Form2"];
+                form2.dt.PrimaryKey = new DataColumn[] { form2.dt.Columns["Masa_İsmi"] };
+                DataRow dtr = form2.dt.Rows.Find(textBox1.Text);
+
+                if (dtr != null)
                 {
-                    this.Close();
+                    textBox1.Clear();
+                    MessageBox.Show("Bu isimle masa bulunmaktadır.", "YES'CHEF", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -55,7 +68,7 @@ namespace YES_CHEF
                     cmd.ExecuteNonQuery();
                     con.Close();
 
-                    Form2 form2 = (Form2)Application.OpenForms["Form2"];
+
 
                     for (int i = 0; i < form2.dt.Rows.Count; i++)
                     {
@@ -69,6 +82,7 @@ namespace YES_CHEF
 
                     this.Close();
                 }
+            }
             
         }
     }
