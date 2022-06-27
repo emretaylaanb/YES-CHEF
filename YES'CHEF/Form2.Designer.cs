@@ -39,6 +39,7 @@
             this.yenidenAdlandırToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.masayıKapatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.masalarıBirleştirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -48,6 +49,7 @@
             // 
             this.flowLayoutPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("flowLayoutPanel1.BackgroundImage")));
             this.flowLayoutPanel1.Controls.Add(this.dataGridView1);
+            this.flowLayoutPanel1.Controls.Add(this.button1);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -80,13 +82,13 @@
             this.masalarıBirleştirToolStripMenuItem,
             this.yenidenAdlandırToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(228, 166);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(228, 144);
             // 
             // aÇToolStripMenuItem
             // 
             this.aÇToolStripMenuItem.Font = new System.Drawing.Font("Arial Black", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.aÇToolStripMenuItem.Name = "aÇToolStripMenuItem";
-            this.aÇToolStripMenuItem.Size = new System.Drawing.Size(225, 28);
+            this.aÇToolStripMenuItem.Size = new System.Drawing.Size(227, 28);
             this.aÇToolStripMenuItem.Text = "Masayı Aç";
             this.aÇToolStripMenuItem.Click += new System.EventHandler(this.aÇToolStripMenuItem_Click);
             // 
@@ -94,7 +96,7 @@
             // 
             this.masaSilToolStripMenuItem.Font = new System.Drawing.Font("Arial Black", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.masaSilToolStripMenuItem.Name = "masaSilToolStripMenuItem";
-            this.masaSilToolStripMenuItem.Size = new System.Drawing.Size(225, 28);
+            this.masaSilToolStripMenuItem.Size = new System.Drawing.Size(227, 28);
             this.masaSilToolStripMenuItem.Text = "Masayı Sil";
             this.masaSilToolStripMenuItem.Click += new System.EventHandler(this.masaSilToolStripMenuItem_Click);
             // 
@@ -102,7 +104,7 @@
             // 
             this.yenidenAdlandırToolStripMenuItem.Font = new System.Drawing.Font("Arial Black", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.yenidenAdlandırToolStripMenuItem.Name = "yenidenAdlandırToolStripMenuItem";
-            this.yenidenAdlandırToolStripMenuItem.Size = new System.Drawing.Size(225, 28);
+            this.yenidenAdlandırToolStripMenuItem.Size = new System.Drawing.Size(227, 28);
             this.yenidenAdlandırToolStripMenuItem.Text = "Yeniden Adlandır";
             this.yenidenAdlandırToolStripMenuItem.Click += new System.EventHandler(this.yenidenAdlandırToolStripMenuItem_Click);
             // 
@@ -110,7 +112,7 @@
             // 
             this.masayıKapatToolStripMenuItem.Font = new System.Drawing.Font("Arial Black", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.masayıKapatToolStripMenuItem.Name = "masayıKapatToolStripMenuItem";
-            this.masayıKapatToolStripMenuItem.Size = new System.Drawing.Size(225, 28);
+            this.masayıKapatToolStripMenuItem.Size = new System.Drawing.Size(227, 28);
             this.masayıKapatToolStripMenuItem.Text = "Masayı Kapat";
             this.masayıKapatToolStripMenuItem.Click += new System.EventHandler(this.masayıKapatToolStripMenuItem_Click);
             // 
@@ -121,6 +123,19 @@
             this.masalarıBirleştirToolStripMenuItem.Size = new System.Drawing.Size(227, 28);
             this.masalarıBirleştirToolStripMenuItem.Text = "Masaları Birleştir";
             this.masalarıBirleştirToolStripMenuItem.Click += new System.EventHandler(this.masalarıBirleştirToolStripMenuItem_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(249, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(91, 77);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Masa Ekle";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form2
             // 
@@ -155,5 +170,6 @@
         private System.Windows.Forms.ToolStripMenuItem aÇToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem masayıKapatToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem masalarıBirleştirToolStripMenuItem;
+        private System.Windows.Forms.Button button1;
     }
 }
