@@ -24,7 +24,7 @@ namespace YES_CHEF
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand("SELECT  Masa_İsmi ,Durum FROM Masalar ", con);
+            SqlCommand cmd = new SqlCommand("SELECT  Masa_İsmi ,Durum FROM Masalar", con);
             SqlDataAdapter da = new SqlDataAdapter();
             da.SelectCommand = cmd;
             da.Fill(dt);
@@ -164,6 +164,49 @@ namespace YES_CHEF
         private void aÇToolStripMenuItem_Click(object sender, EventArgs e)
         {
             btn_Click(nesne,e);
+        }
+
+        private void masayıKapatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if ((nesne as Button).BackColor == Color.Lime)
+            {
+                DialogResult dd= MessageBox.Show("Masayı kapatmak istediğinize emin misiniz ? Masa kapandıktan sonra adisyon silinecektir .","YES'CHEF",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+                if (dd == DialogResult.Yes)
+                {
+                  
+                    con.Open();
+
+                    //mevcut masanın ürünlerini silme
+                    SqlCommand cmd = new SqlCommand("delete from Masa where masa_ismi = @veri", con);
+                    cmd.Parameters.AddWithValue("@veri", (nesne as Button).Text);
+                    cmd.ExecuteNonQuery();
+
+                    //Masa durumunu düzeltme
+                    cmd.CommandText = "Update Masalar Set Durum = 0 Where Masa_İsmi = '" + (nesne as Button).Text + "'";
+                    cmd.ExecuteNonQuery();
+
+                    con.Close();
+
+                    for (int i = 0; i < dt.Rows.Count; i++)
+                    {
+                        DataRow dtrow = dt.Rows[i];
+                        if (dtrow["Masa_İsmi"] == (nesne as Button).Text)
+                        {
+                            dtrow["Durum"] = 0;
+                            btn_renk();
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Masa kapalı.", "YES'CHEF", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+            }
+        }
+
+        private void masalarıBirleştirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

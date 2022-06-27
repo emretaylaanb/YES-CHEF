@@ -24,7 +24,7 @@ namespace YES_CHEF
         int adet = 1;
         bool ikram = false;
         public string msismi = "";
-        public object masa_butn;
+        //public object masa_butn;
         
          //FormIlk nesnesini tanımlıyoruz. Burda önemli olan new diye yeni bir nesne değil, Application.OpenForms komutuyla açık olan Formlar arasından tanımlıyoruz
 
@@ -264,7 +264,7 @@ namespace YES_CHEF
         
         private void button3_Click_1(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Ödeme alındı mı ?", "YES'CHEF Masa Kapanış", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show((sender as Button).Text+" Ödeme alındı mı ?", "YES'CHEF Masa Kapanış", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 //Masa Silme

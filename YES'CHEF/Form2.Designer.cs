@@ -31,15 +31,17 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.aÇToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.masaSilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.yenidenAdlandırToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.aÇToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.masayıKapatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.masalarıBirleştirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.flowLayoutPanel1.SuspendLayout();
-            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -51,6 +53,14 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1904, 108);
             this.flowLayoutPanel1.TabIndex = 0;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.TabIndex = 0;
             // 
             // flowLayoutPanel2
             // 
@@ -66,16 +76,26 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aÇToolStripMenuItem,
             this.masaSilToolStripMenuItem,
+            this.masayıKapatToolStripMenuItem,
+            this.masalarıBirleştirToolStripMenuItem,
             this.yenidenAdlandırToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(226, 110);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(228, 166);
+            // 
+            // aÇToolStripMenuItem
+            // 
+            this.aÇToolStripMenuItem.Font = new System.Drawing.Font("Arial Black", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.aÇToolStripMenuItem.Name = "aÇToolStripMenuItem";
+            this.aÇToolStripMenuItem.Size = new System.Drawing.Size(225, 28);
+            this.aÇToolStripMenuItem.Text = "Masayı Aç";
+            this.aÇToolStripMenuItem.Click += new System.EventHandler(this.aÇToolStripMenuItem_Click);
             // 
             // masaSilToolStripMenuItem
             // 
             this.masaSilToolStripMenuItem.Font = new System.Drawing.Font("Arial Black", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.masaSilToolStripMenuItem.Name = "masaSilToolStripMenuItem";
             this.masaSilToolStripMenuItem.Size = new System.Drawing.Size(225, 28);
-            this.masaSilToolStripMenuItem.Text = "Masa Sil";
+            this.masaSilToolStripMenuItem.Text = "Masayı Sil";
             this.masaSilToolStripMenuItem.Click += new System.EventHandler(this.masaSilToolStripMenuItem_Click);
             // 
             // yenidenAdlandırToolStripMenuItem
@@ -86,21 +106,21 @@
             this.yenidenAdlandırToolStripMenuItem.Text = "Yeniden Adlandır";
             this.yenidenAdlandırToolStripMenuItem.Click += new System.EventHandler(this.yenidenAdlandırToolStripMenuItem_Click);
             // 
-            // dataGridView1
+            // masayıKapatToolStripMenuItem
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView1.TabIndex = 0;
+            this.masayıKapatToolStripMenuItem.Font = new System.Drawing.Font("Arial Black", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.masayıKapatToolStripMenuItem.Name = "masayıKapatToolStripMenuItem";
+            this.masayıKapatToolStripMenuItem.Size = new System.Drawing.Size(225, 28);
+            this.masayıKapatToolStripMenuItem.Text = "Masayı Kapat";
+            this.masayıKapatToolStripMenuItem.Click += new System.EventHandler(this.masayıKapatToolStripMenuItem_Click);
             // 
-            // aÇToolStripMenuItem
+            // masalarıBirleştirToolStripMenuItem
             // 
-            this.aÇToolStripMenuItem.Font = new System.Drawing.Font("Arial Black", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.aÇToolStripMenuItem.Name = "aÇToolStripMenuItem";
-            this.aÇToolStripMenuItem.Size = new System.Drawing.Size(225, 28);
-            this.aÇToolStripMenuItem.Text = "AÇ";
-            this.aÇToolStripMenuItem.Click += new System.EventHandler(this.aÇToolStripMenuItem_Click);
+            this.masalarıBirleştirToolStripMenuItem.Font = new System.Drawing.Font("Arial Black", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.masalarıBirleştirToolStripMenuItem.Name = "masalarıBirleştirToolStripMenuItem";
+            this.masalarıBirleştirToolStripMenuItem.Size = new System.Drawing.Size(227, 28);
+            this.masalarıBirleştirToolStripMenuItem.Text = "Masaları Birleştir";
+            this.masalarıBirleştirToolStripMenuItem.Click += new System.EventHandler(this.masalarıBirleştirToolStripMenuItem_Click);
             // 
             // Form2
             // 
@@ -118,8 +138,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form2_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
-            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -133,5 +153,7 @@
         private System.Windows.Forms.ToolStripMenuItem yenidenAdlandırToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ToolStripMenuItem aÇToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem masayıKapatToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem masalarıBirleştirToolStripMenuItem;
     }
 }
