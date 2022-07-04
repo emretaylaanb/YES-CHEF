@@ -24,13 +24,13 @@ namespace YES_CHEF
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand("SELECT  Masa_İsmi ,Durum FROM Masalar", con);
+            SqlCommand cmd = new SqlCommand("SELECT  Masa_İsmi ,Durum FROM Masalar ORDER BY Masa_İsmi", con);
             SqlDataAdapter da = new SqlDataAdapter();
             da.SelectCommand = cmd;
             da.Fill(dt);
 
             btn_renk();
-            dataGridView1.DataSource = dt;//silinecek
+            
         }
 
         void içerikler(string isim, Color s, int id)
@@ -39,12 +39,16 @@ namespace YES_CHEF
             btn.Width = 157;
             btn.Height = 225;
             btn.Text = isim; // değişti
-            btn.TextAlign = ContentAlignment.MiddleCenter;
+            btn.TextAlign = ContentAlignment.BottomCenter;
+            btn.FlatStyle = FlatStyle.Flat;
             btn.Name = "button_" + id; //değişti
             btn.Click += new EventHandler(btn_Click);
             btn.MouseEnter += new EventHandler(btn_Enter);
+            btn.ForeColor = Color.Transparent;
             btn.BackColor = s;
             btn.ContextMenuStrip = contextMenuStrip1;
+            Image img = Image.FromFile("C:\\Users\\emreb\\source\\repos\\YES'CHEF\\Masa.png");
+            btn.Image = img; 
             flowLayoutPanel2.Controls.Add(btn); //Tahoma; 20,25pt; style=Bold
 
         }
@@ -214,6 +218,12 @@ namespace YES_CHEF
         {
             Form6 form6 = new Form6();
             form6.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form7 form7 = new Form7();
+            form7.ShowDialog();
         }
     }
 }

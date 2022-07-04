@@ -47,7 +47,7 @@ namespace YES_CHEF
             
 
             //içerikleri çekme
-            SqlCommand cmd2 = new SqlCommand("Select * from İçerikler", con);
+            SqlCommand cmd2 = new SqlCommand("Select * from İçerikler ORDER BY İsmi ", con);
             SqlDataAdapter da2 = new SqlDataAdapter();
             da2.SelectCommand = cmd2;
             da2.Fill(dt2);

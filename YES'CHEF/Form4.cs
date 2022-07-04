@@ -55,12 +55,12 @@ namespace YES_CHEF
                     SqlConnection con = new SqlConnection("Data Source=EMRET;Initial Catalog=Mekan_Days;Integrated Security=True");
                     con.Open();
                     SqlCommand cmd = new SqlCommand("UPDATE Masalar SET Masa_İsmi = @yveri WHERE Masa_İsmi = @everi ", con);
-                    cmd.Parameters.AddWithValue("@yveri", textBox1.Text);
+                    cmd.Parameters.AddWithValue("@yveri", textBox1.Text.ToUpper());
                     cmd.Parameters.AddWithValue("@everi", isim);
                     if (masa_acik)
                     {
                         SqlCommand cmd2 = new SqlCommand("UPDATE Masa SET masa_ismi = @veri Where masa_ismi = @eeveri", con);
-                        cmd2.Parameters.AddWithValue("@veri", textBox1.Text);
+                        cmd2.Parameters.AddWithValue("@veri", textBox1.Text.ToUpper());
                         cmd2.Parameters.AddWithValue("@eeveri", isim);
                         cmd2.ExecuteNonQuery();
                     }
@@ -75,7 +75,7 @@ namespace YES_CHEF
                         DataRow dtrow = form2.dt.Rows[i];
                         if (dtrow["Masa_İsmi"] == isim)
                         {
-                            dtrow["Masa_İsmi"] = textBox1.Text;
+                            dtrow["Masa_İsmi"] = textBox1.Text.ToUpper();
                             form2.btn_renk();
                         }
                     }
