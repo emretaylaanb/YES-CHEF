@@ -109,6 +109,8 @@ namespace YES_CHEF
             btn.Text = isim; // değişti
             btn.TextAlign = ContentAlignment.BottomCenter;
             btn.Name = "button_" + id; //değişti
+            btn.ForeColor = Color.Black;
+            btn.BackColor = Color.White;
             btn.Click += new EventHandler(btn_Click);
             flowLayoutPanel2.Controls.Add(btn);
 

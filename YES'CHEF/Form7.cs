@@ -88,6 +88,7 @@ namespace YES_CHEF
                 dtr["Ücret"]= textBox2.Text;
                 dtr["Kategori"]=comboBox1.Text;
                 MessageBox.Show("İçerik güncellenmiştir", "YES'CHEF", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             }
             else
             {
@@ -100,6 +101,7 @@ namespace YES_CHEF
             textBox1.Clear();
             textBox2.Clear();
             comboBox1.SelectedIndex = 0;
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDown;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -123,11 +125,13 @@ namespace YES_CHEF
                 textBox2.Clear();
                 comboBox1.SelectedItem = 0;
                 textBox1.Focus();
+                comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             }
             else
             {
                 MessageBox.Show("Bu isimle ürün bulunmaktadır", "YES'CHEF", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -149,7 +153,13 @@ namespace YES_CHEF
                 MessageBox.Show("Ürün başarıyla silindi ", "YES'CHEF", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
-           
+
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDown;
         }
     }
 }
