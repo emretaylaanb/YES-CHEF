@@ -19,9 +19,23 @@ namespace YES_CHEF
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form2 fomr2  = new Form2();
-            fomr2.Show();
-            this.Hide();
+            if (textBox1.Text== "admin" && textBox2.Text == "admin")
+            {
+                Form2 fomr2 = new Form2();
+                fomr2.Show();
+                this.Hide();
+            }
+            else
+            {
+                textBox2.Clear();
+                MessageBox.Show("Kullanıcı adı veya şifre yanlış","YES'CHEF",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+            
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            this.ActiveControl = textBox2;
         }
     }
 }

@@ -104,10 +104,13 @@ namespace YES_CHEF
         void içerikler(int id, string isim)
         {
             Button btn = new Button();
-            btn.Width = 64;
-            btn.Height = 80;
+            btn.Width = 77;
+            btn.Height = 90;
             btn.Text = isim; // değişti
-            btn.TextAlign = ContentAlignment.BottomCenter;
+            if (btn.Text.Length <= 6) { btn.Font = new Font("Airal", 12, FontStyle.Bold); }
+            if (btn.Text.Length > 6) { btn.Font = new Font("Airal", 10, FontStyle.Bold); }
+            if (btn.Text.Length > 9) { btn.Font = new Font("Airal", 9, FontStyle.Bold); }
+            btn.TextAlign = ContentAlignment.MiddleCenter;
             btn.Name = "button_" + id; //değişti
             btn.ForeColor = Color.Black;
             btn.BackColor = Color.White;
@@ -307,6 +310,11 @@ namespace YES_CHEF
             }
 
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

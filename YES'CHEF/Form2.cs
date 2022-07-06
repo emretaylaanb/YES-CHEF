@@ -225,5 +225,10 @@ namespace YES_CHEF
             Form7 form7 = new Form7();
             form7.ShowDialog();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            masalarıBirleştirToolStripMenuItem_Click(sender, null);
+        }
     }
 }
