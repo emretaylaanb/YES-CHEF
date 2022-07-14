@@ -17,7 +17,7 @@ namespace YES_CHEF
         {
             InitializeComponent();
         }
-
+        //MEKANDAYSCAFE\\MEKAN_DAYS
         public DataTable dt = new DataTable();
         SqlConnection con = new SqlConnection("Data Source=EMRET;Initial Catalog=Mekan_Days;Integrated Security=True");
         Object nesne;
@@ -36,19 +36,20 @@ namespace YES_CHEF
         void içerikler(string isim, Color s, int id)
         {
             Button btn = new Button();
-            btn.Width = 157;
-            btn.Height = 225;
+            btn.Width = 154;
+            btn.Height = 175;
             btn.Text = isim; // değişti
-            btn.TextAlign = ContentAlignment.BottomCenter;
+            btn.TextAlign = ContentAlignment.MiddleCenter;
             btn.FlatStyle = FlatStyle.Flat;
             btn.Name = "button_" + id; //değişti
             btn.Click += new EventHandler(btn_Click);
             btn.MouseEnter += new EventHandler(btn_Enter);
             btn.ForeColor = Color.Transparent;
             btn.BackColor = s;
+            btn.Font = new Font("Tahoma", 18, FontStyle.Bold);
             btn.ContextMenuStrip = contextMenuStrip1;
-            Image img = Image.FromFile("C:\\Users\\emreb\\source\\repos\\YES'CHEF\\Masa.png");
-            btn.Image = img; 
+           // Image img = Image.FromFile("C:\\Users\\emreb\\source\\repos\\YES'CHEF\\Masa.png");
+          //  btn.Image = img; 
             flowLayoutPanel2.Controls.Add(btn); //Tahoma; 20,25pt; style=Bold
 
         }
@@ -229,6 +230,17 @@ namespace YES_CHEF
         private void button4_Click(object sender, EventArgs e)
         {
             masalarıBirleştirToolStripMenuItem_Click(sender, null);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form8 form8 = new Form8();
+            form8.ShowDialog();
         }
     }
 }

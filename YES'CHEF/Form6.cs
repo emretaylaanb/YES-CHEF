@@ -18,7 +18,7 @@ namespace YES_CHEF
             InitializeComponent();
         }
         Form2 form2 = (Form2)Application.OpenForms["Form2"];
-        SqlConnection sqlConnection = new SqlConnection("Data Source = EMRET; Initial Catalog = Mekan_Days; Integrated Security = True");
+        SqlConnection sqlConnection = new SqlConnection("Data Source =EMRET; Initial Catalog = Mekan_Days; Integrated Security = True");
         private void button1_Click(object sender, EventArgs e)
         {
 
